@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ifa's Accordion Solution</title>
+    </head>
+
+    <body>
+        <div class="content">
+            <header class=".header">
+                <img src="images/background-pattern-desktop.svg" alt="">
+            </header>
+            <div class="accordion">
+                <div class="accordion-content">
+                    <h1>
+                        <img src="images/icon-star.svg" alt="star svg">
+                        FAQs
+                    </h1>
+
+                    <div class="q-ans">
+                       
+                            <h2>What is Frontend Mentor, and how will it help me?</h2>
+                            <button type="button" onclick=toggleBtn() class="toggleBtn" aria-controls="ans-1" aria-expanded="true"></button>
+
+                        <div class="answer" id="ans-1" >
+                            <p class="ans"> Frontend Mentor offers realistic coding challenges to help developers improve their 
+                                frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+                                all levels and ideal for portfolio building.
+                            </p>
+                            <span class="line"></span>
+                        </div>
+                    <div class="q-ans">
+                        <div class="q-btn">
+                            <h2>Is Frontend Mentor free?</h2>
+                            <button type="button" onclick=toggleBtn() class="toggleBtn" aria-controls="ans-2" aria-expanded="false"></button>
+                        </div>
+
+                        <div class="answer" id="ans-2">
+                            <p class="ans">
+                                Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+                                option providing access to a range of projects suitable for all skill levels.
+                            </p>
+                            <span class="line"></span>
+                        </div>
+                    <div class="q-ans">
+                        <div class="q-btn">
+                            <h2>Can I use Frontend Mentor projects in my portfolio?</h2>
+                            <button type="button" onclick=toggleBtn() class="toggleBtn" aria-controls="ans-3" aria-expanded="false"></button>
+                        </div>
+
+                        <div class="answer" id="ans-3">
+                            <p class="ans">
+                                Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+                                way to showcase your skills to potential employers!
+                            </p>
+                            <span class="line"></span>
+                        </div>
+                    <div class="q-ans">
+                        <div class="q-btn">
+                            <h2>How can I get help if I'm stuck on a challenge?</h2>
+                            <button type="button" onclick=toggleBtn() class="toggleBtn" aria-controls="ans-4" aria-expanded="false"></button>
+                        </div>
+
+                        <div class="answer" id="ans-4">
+                            <p class="ans">
+                                The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+                                channel where you can ask questions and seek support from other community members.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </body>
+    <script>
+        let toggle = document.querySelector('.toggleBtn')
+
+        function toggleBtn(){
+            let expand = toggle.getAttribute('aria-expanded')
+            expand === 'true' ? toggle.setAttribute('aria-expanded', 'false') : toggle.setAttribute('aria-expanded', 'true')
+
+            console.log(toggle.getAttribute('aria-expanded'))
+        }
+    </script>
+</html>
