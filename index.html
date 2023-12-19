@@ -22,7 +22,7 @@
                     <div class="q-ans">
                        
                             <h2>What is Frontend Mentor, and how will it help me?</h2>
-                            <button type="button" onclick=toggleBtn() class="toggleBtn" aria-controls="ans-1" aria-expanded="true"></button>
+                            <button type="button" class="toggleBtn" aria-controls="ans-1" aria-expanded="true"></button>
 
                         <div class="answer" id="ans-1" >
                             <p class="ans"> Frontend Mentor offers realistic coding challenges to help developers improve their 
@@ -32,10 +32,10 @@
                             <span class="line"></span>
                         </div>
                     <div class="q-ans">
-                        <div class="q-btn">
+                      
                             <h2>Is Frontend Mentor free?</h2>
-                            <button type="button" onclick=toggleBtn() class="toggleBtn" aria-controls="ans-2" aria-expanded="false"></button>
-                        </div>
+                            <button type="button" class="toggleBtn" aria-controls="ans-2" aria-expanded="false"></button>
+                        
 
                         <div class="answer" id="ans-2">
                             <p class="ans">
@@ -45,10 +45,10 @@
                             <span class="line"></span>
                         </div>
                     <div class="q-ans">
-                        <div class="q-btn">
+                        
                             <h2>Can I use Frontend Mentor projects in my portfolio?</h2>
-                            <button type="button" onclick=toggleBtn() class="toggleBtn" aria-controls="ans-3" aria-expanded="false"></button>
-                        </div>
+                            <button type="button" class="toggleBtn" aria-controls="ans-3" aria-expanded="false"></button>
+                       
 
                         <div class="answer" id="ans-3">
                             <p class="ans">
@@ -58,10 +58,10 @@
                             <span class="line"></span>
                         </div>
                     <div class="q-ans">
-                        <div class="q-btn">
+                        
                             <h2>How can I get help if I'm stuck on a challenge?</h2>
-                            <button type="button" onclick=toggleBtn() class="toggleBtn" aria-controls="ans-4" aria-expanded="false"></button>
-                        </div>
+                            <button type="button" class="toggleBtn" aria-controls="ans-4" aria-expanded="false"></button>
+                        
 
                         <div class="answer" id="ans-4">
                             <p class="ans">
@@ -75,13 +75,15 @@
         </div> 
     </body>
     <script>
-        let toggle = document.querySelector('.toggleBtn')
+        let toggle = document.querySelectorAll('.toggleBtn')
 
-        function toggleBtn(){
-            let expand = toggle.getAttribute('aria-expanded')
-            expand === 'true' ? toggle.setAttribute('aria-expanded', 'false') : toggle.setAttribute('aria-expanded', 'true')
+            toggle.forEach(ele => {
+                ele.addEventListener('click', function(){
+                    let expand = ele.getAttribute('aria-expanded')
+                    expand === 'true' ? ele.setAttribute('aria-expanded', 'false') : ele.setAttribute('aria-expanded', 'true')
 
-            console.log(toggle.getAttribute('aria-expanded'))
-        }
+                    console.log(ele.getAttribute('aria-expanded'))
+                        })
+            })
     </script>
 </html>

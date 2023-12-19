@@ -92,19 +92,18 @@ p{
     width: 1.5rem;
     border: none;
     border-radius: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 button[aria-expanded="true"]+.answer{
     display: block;
     max-height: 12.5rem;
+    transition: all 2s ease-in-out;
 }
 
 button[aria-expanded="false"]+.answer{
     display: none;
     max-height: 0;
+    transition: all 2s ease-in-out;
 }
-
-/* button[aria-expanded="true"]+.content {
-    visibility: visible;
-    max-height: 12.5rem;
-  } */
