@@ -114,7 +114,7 @@ h1{
 
 button[aria-expanded="true"]+.answer{
     display: block;
-    max-height: 12.5rem;
+    max-height: 12.3rem;
 }
 
 button[aria-expanded="false"]+.answer{
