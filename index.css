@@ -42,7 +42,7 @@ header{
 
 .accordion{
     background-color: white;
-    width: 45%;
+    width: 90%;
     max-width: 600px;
     border-radius: 16px;
     position: relative;
@@ -52,8 +52,8 @@ header{
 }
 
 .accordion-content{
+    position: relative;
     margin-left: 2.2rem;
-    margin-bottom: 3rem;
 }
 
 h1{
@@ -65,20 +65,9 @@ h1{
     font-family: 'WorkSans SemiBold';
 }
 
-/* margin-right: 3.07rem; */
-
-p{
-    font-family: 'WorkSans Regular';
-    color: hsl(292, 16%, 49%);
-    width: 95%;
-    line-height: 24px;
-    opacity: .8;
-}
-
 .toggleBtn{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-size: 17px;
     font-family: 'WorkSans Regular';
     font-weight: 600;
@@ -86,35 +75,70 @@ p{
     background: none;
     border: none;
     pointer-events: none;
+    width: 100%;
 }
 
 .toggleBtn span{
     pointer-events: auto;
+    position: relative;
+    top: 7px;
 }
 
 .toggleBtn span:hover{
     color: #AE23EF;
+    cursor: pointer;
 }
 
-.toggleBtn::after{
+.toggleBtn[aria-expanded=true]::after{
     position: absolute;
-    right: 2.7rem;
-    content: '';
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: hsl(229, 23%, 40%);
-    border-radius: 100%;
+    right: 4.5%;
+    content: url(/Ifas-Accordion-Solution/images/icon-minus.svg);
     pointer-events: auto;
+}
+
+.toggleBtn[aria-expanded=false]::after{
+    position: absolute;
+    right: 4.5%;
+    content: url(/Ifas-Accordion-Solution/images/icon-plus.svg);
+    pointer-events: auto;
+}
+
+.toggleBtn[aria-expanded=false]{
+    margin-bottom: 2rem;
+}
+
+.toggleBtn span{
+    width: 85%;
+    text-align: left;
 }
 
 button[aria-expanded="true"]+.answer{
     display: block;
     max-height: 12.5rem;
-    transition: all 2s ease-in-out;
 }
 
 button[aria-expanded="false"]+.answer{
     display: none;
     max-height: 0;
-    transition: all 2s ease-in-out;
+}
+
+p{
+    font-family: 'WorkSans Regular';
+    color: hsl(292, 16%, 49%);
+    width: 95%;
+    line-height: 24px;
+    opacity: .8;
+    margin-bottom: 2.5rem;
+    margin-left: 4.5px;
+    position: relative;
+    top: 14px;
+}
+
+.line{
+    position: relative;
+    left: 4px;
+    height: 1px;
+    background-color: rgb(236, 236, 236);
+    width: 91.3%;
+    margin-bottom: 1rem;
 }
