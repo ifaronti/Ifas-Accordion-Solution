@@ -101,13 +101,12 @@
     <script>
         let toggle = document.querySelectorAll('.toggleBtn')
 
-            toggle.forEach(ele => {
-                ele.addEventListener('click', function(){
-                    let expand = ele.getAttribute('aria-expanded')
-                    expand === 'true' ? ele.setAttribute('aria-expanded', 'false') : ele.setAttribute('aria-expanded', 'true')
+        toggle.forEach(ele => {
+            ele.addEventListener('click', function(){
+                let expand = ele.getAttribute('aria-expanded')
+                expand === 'true' ? ele.setAttribute('aria-expanded', 'false') : ele.setAttribute('aria-expanded', 'true')
 
-                    console.log(ele.getAttribute('aria-expanded'))
-                        })
             })
+        })
     </script>
 </html>
