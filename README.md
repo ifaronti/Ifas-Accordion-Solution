@@ -33,7 +33,7 @@ Users should be able to:
 
 The use of element attributes to effect CSS changes. That's the reason I picked up this challenge. Yes! I will be using a lot of element attributes in my future codes
 
-The codes below are the reasons I wanted to do this challenge and ensure I have a good grip of the below:
+The codes below are the reasons I wanted to do this challenge and ensure I have a good grip of them:
 
 ```html
 <button 
