@@ -39,7 +39,6 @@ header{
     height: 320px;
     background-image: url(/images/background-pattern-desktop.svg);
     margin-top: 0;
-    overflow-x: hidden;
 }
 
 .accordion{
@@ -70,6 +69,7 @@ h1{
 .toggleBtn{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 17px;
     font-family: 'WorkSans Regular';
     font-weight: 600;
@@ -78,31 +78,19 @@ h1{
     border: none;
     pointer-events: none;
     width: 100%;
+    position: relative;
+    top: 10px;
 }
 
 .toggleBtn span{
     pointer-events: auto;
     position: relative;
-    top: 7px;
+    align-self: center;
 }
 
 .toggleBtn span:hover{
     color: #AE23EF;
     cursor: pointer;
-}
-
-.toggleBtn[aria-expanded=true]::after{
-    position: absolute;
-    right: 4.5%;
-    content: url(/Ifas-Accordion-Solution/images/icon-minus.svg);
-    pointer-events: auto;
-}
-
-.toggleBtn[aria-expanded=false]::after{
-    position: absolute;
-    right: 4.5%;
-    content: url(/Ifas-Accordion-Solution/images/icon-plus.svg);
-    pointer-events: auto;
 }
 
 .toggleBtn[aria-expanded=false]{
@@ -116,12 +104,34 @@ h1{
 
 button[aria-expanded="true"]+.answer{
     display: block;
-    max-height: 12.3rem;
+    max-height: 12.5rem;
 }
 
 button[aria-expanded="false"]+.answer{
     display: none;
     max-height: 0;
+}
+
+button[aria-expanded=true]::after{
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    content: url(/Ifas-Accordion-Solution/codes/images/icon-minus.svg);
+    right: 4.5%;
+    pointer-events: auto;
+    align-self: center;
+}
+
+button[aria-expanded=false]::after{
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    right: 4.5%;
+    content: url(/Ifas-Accordion-Solution/codes/images/icon-plus.svg);
+    pointer-events: auto;
+    align-self: center;
 }
 
 p{
