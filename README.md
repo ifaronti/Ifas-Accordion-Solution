@@ -1,15 +1,8 @@
-# Frontend Mentor - FAQ accordion solution
-
-This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+FAQ accordion solution
 
 ## Table of contents
 - [The challenge](#the-challenge)
 - [Links](#link-to-solution)
-- [Useful-resources](#useful-resources)
-- [What I learned](#what-i-learned)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
 
 ### The challenge
 
@@ -29,17 +22,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS
 
-### Useful Resources
-- Resource 1: [Stackoverflow](https://stackoverflow.com/questions/10768451/inline-svg-in-css) 
-
-  I got stuck for a whole day trying to figure out why my SVGs load properfly when used as pseudo elements' content on locals server but the live URL shows nothing. This link above is saved for future usage and references. I searched everywhere. The only thing that helped was the link above. 
-
-### What I learned
-I picked up alot about SVGs in this challenge as I had issues with my SVGs not loading on live url but displays fine on localHost. I spent a whole day on this issue.
-
-The use of element attributes to effect CSS changes. That's the reason I picked up this challenge. Yes! I will be using a lot of element attributes in my future codes
-
-The codes below are the reasons I wanted to do this challenge and ensure I have a good grip of them:
 
 ```html
 <button 
@@ -105,9 +87,3 @@ toggle.forEach(ele => {
 
 ```
 
-## Author
-- Frontend Mentor - [@ifaronti](https://www.frontendmentor.io/profile/ifaronti)
-
-## Acknowledgments
-
-Thanks to frontendmentor.io for this beeautiful challenge!
